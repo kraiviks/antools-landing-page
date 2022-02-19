@@ -157,12 +157,19 @@ body {
 .input__search input {
   background: none;
   border: none;
-  padding: 10px 0;
+  border-radius: 15px;
+  padding: 10px 0px;
   cursor: pointer;
 }
 
 .input__search input:focus-visible {
   outline: none;
+}
+
+.input__search input:-webkit-autofill,
+.input__search input:-webkit-autofill:focus {
+  -webkit-transition: background-color 600000s 0s, color 600000s 0s;
+  transition: background-color 600000s 0s, color 600000s 0s;
 }
 
 .btn {
