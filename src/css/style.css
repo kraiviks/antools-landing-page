@@ -158,8 +158,9 @@ body {
   background: none;
   border: none;
   border-radius: 15px;
-  padding: 10px 0px;
+  padding: 10px;
   cursor: pointer;
+  width: 30em;
 }
 
 .input__search input:focus-visible {
