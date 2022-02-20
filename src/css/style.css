@@ -563,11 +563,11 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   justify-self: flex-end;
-  background: url("../img/bg/slider__user-bg.svg") right bottom no-repeat;
+  background: url("../img/bg/slider__user-bg.png") right bottom no-repeat;
 }
 
 .slider__wrapp .slider__item .info {
-  background: url("../img/bg/slider__info-bg.svg") left 30% no-repeat;
+  background: url("../img/bg/slider__info-bg.png") left 30% no-repeat;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
