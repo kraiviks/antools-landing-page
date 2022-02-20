@@ -185,6 +185,7 @@ body {
   position: fixed;
   width: 100%;
   padding-top: 26px;
+  z-index: 999;
 }
 
 .header .container {
@@ -207,10 +208,24 @@ body {
   font-size: 22px;
   line-height: 33px;
   color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .header .logo img {
   margin-right: 12px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.header .logo:hover {
+  color: #ff6e30;
+}
+
+.header .logo:hover img {
+  -webkit-transform: translate(400%);
+          transform: translate(400%);
 }
 
 .header .nav__link {
@@ -220,12 +235,9 @@ body {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.55);
   margin: 0 15px;
-  position: relative;
 }
 
-.header .nav__link span {
-  position: absolute;
-  top: -2px;
+.header .nav__link i {
   color: rgba(255, 255, 255, 0.55);
 }
 
@@ -332,6 +344,8 @@ body {
   /* Note: backdrop-filter has minimal browser support */
   outline: 1px solid #404a52;
   border-radius: 15px;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .popular-tools .tools__box .item:hover::after {
