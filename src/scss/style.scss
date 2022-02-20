@@ -376,3 +376,83 @@ body {
 		}
 	}
 }
+
+.slider {
+	height: 582px;
+	margin-top: 200px;
+	&__wrapp {
+		.slider__item {
+			display: grid;
+			grid-template: 1fr / 1fr 1fr;
+			position: relative;
+			.user {
+				display: flex;
+				flex-direction: column;
+				justify-self: flex-end;
+				background: url("../img/bg/slider__user-bg.svg") right bottom
+					no-repeat;
+			}
+			.info {
+				background: url("../img/bg/slider__info-bg.svg") left 30%
+					no-repeat;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				padding-left: 60px;
+			}
+
+			.user__info {
+				background: rgba(40, 48, 54, 0.8);
+				backdrop-filter: blur(50px);
+				/* Note: backdrop-filter has minimal browser support */
+
+				border-radius: 8px;
+				padding: 10px 23px;
+
+				position: absolute;
+				bottom: 10%;
+				left: 30%;
+
+				.user__name {
+					font-weight: 500;
+					font-size: 26px;
+					line-height: 39px;
+					/* identical to box height */
+
+					letter-spacing: 0.015em;
+
+					color: rgba(255, 253, 253, 0.78);
+				}
+				.user__position {
+					font-size: 16px;
+					line-height: 24px;
+					/* identical to box height */
+
+					color: rgba(255, 253, 253, 0.55);
+				}
+			}
+		}
+	}
+}
+
+.slick-prev {
+	position: absolute;
+	left: -5%;
+	top: 50%;
+	background: none;
+	border: none;
+}
+
+.slick-next {
+	position: absolute;
+	right: -5%;
+	top: 50%;
+	background: none;
+	border: none;
+}
+
+.fz50 {
+	font-size: 50px;
+
+	cursor: pointer;
+}

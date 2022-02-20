@@ -539,4 +539,93 @@ body {
 .newcomer-tools .tools__box .item .item__desc {
   font-size: 14px;
 }
+
+.slider {
+  height: 582px;
+  margin-top: 200px;
+}
+
+.slider__wrapp .slider__item {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template: 1fr / 1fr 1fr;
+  position: relative;
+}
+
+.slider__wrapp .slider__item .user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  justify-self: flex-end;
+  background: url("../img/bg/slider__user-bg.svg") right bottom no-repeat;
+}
+
+.slider__wrapp .slider__item .info {
+  background: url("../img/bg/slider__info-bg.svg") left 30% no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 60px;
+}
+
+.slider__wrapp .slider__item .user__info {
+  background: rgba(40, 48, 54, 0.8);
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 8px;
+  padding: 10px 23px;
+  position: absolute;
+  bottom: 10%;
+  left: 30%;
+}
+
+.slider__wrapp .slider__item .user__info .user__name {
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 39px;
+  /* identical to box height */
+  letter-spacing: 0.015em;
+  color: rgba(255, 253, 253, 0.78);
+}
+
+.slider__wrapp .slider__item .user__info .user__position {
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height */
+  color: rgba(255, 253, 253, 0.55);
+}
+
+.slick-prev {
+  position: absolute;
+  left: -5%;
+  top: 50%;
+  background: none;
+  border: none;
+}
+
+.slick-next {
+  position: absolute;
+  right: -5%;
+  top: 50%;
+  background: none;
+  border: none;
+}
+
+.fz50 {
+  font-size: 50px;
+  cursor: pointer;
+}
 /*# sourceMappingURL=style.css.map */
