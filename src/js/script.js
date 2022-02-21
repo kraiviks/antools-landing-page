@@ -7,3 +7,7 @@ $(document).ready(function () {
 			"<button type='button' class='slick-next pull-right'><i class='fz50 link fa-solid fa-angle-right' aria-hidden='true'></i></button>",
 	});
 });
+
+$(".nav__menu").click(() => {
+	$(".nav").toggle("slow");
+});

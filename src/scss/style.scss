@@ -9,6 +9,8 @@
 	color: $color-white;
 
 	font-family: "Poppins", "Roboto", sans-serif;
+
+	//outline: 1px solid red;
 }
 
 body {
@@ -26,6 +28,73 @@ body {
 
 .container {
 	padding: 0 15px;
+	position: relative;
+}
+
+.nav__active {
+	display: flex !important;
+	height: initial !important;
+}
+@media (min-width: 320px) {
+	.container {
+		flex-direction: column;
+		align-items: center;
+	}
+	.nav__menu {
+		display: block;
+		position: absolute;
+		left: 10%;
+	}
+	.header {
+		position: relative !important;
+		.nav {
+			display: flex;
+			flex-direction: column;
+			margin-top: 10px;
+			&__link {
+				padding: 10px 0;
+			}
+		}
+		.auth {
+			margin-top: 30px;
+			.btn {
+				padding: 5px 15px;
+			}
+		}
+	}
+	.section-header {
+		background: url("../img/bg/header-bg.png") right bottom / 50% no-repeat;
+	}
+	.subscribe__input input {
+		width: 14rem;
+	}
+	.tools__box {
+		grid-template-columns: 1fr 1fr;
+
+		.item {
+			padding: 5px;
+			.item__header {
+				flex-direction: column;
+				align-items: center;
+			}
+		}
+	}
+	.slider__wrapp .slider__item {
+		grid-template-columns: 1fr;
+		.user__info {
+			position: relative;
+			padding: 0;
+		}
+		.info {
+			padding: 0;
+		}
+	}
+	.slick-prev {
+		left: 5%;
+	}
+	.slick-next {
+		right: 5%;
+	}
 }
 
 @media (min-width: 575.98px) {
@@ -40,11 +109,79 @@ body {
 	.container {
 		width: 720px;
 	}
+	.header {
+		.container {
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+		}
+		.nav {
+			display: flex !important;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.nav__menu {
+			display: none;
+		}
+		.auth {
+			margin: 0;
+			.btn {
+				padding: 8px 10px;
+			}
+		}
+	}
+
+	.tools__box {
+		.item {
+			padding: 15px;
+			.item__header {
+				flex-direction: row;
+			}
+		}
+	}
 }
 
 @media (min-width: 991.98px) {
 	.container {
 		width: 960px;
+	}
+	.section-header {
+		background: url("../img/bg/header-bg.png") right bottom no-repeat;
+	}
+	.footer {
+		.container {
+			grid-template-columns: repeat(4, 1fr);
+			gap: 115px;
+		}
+	}
+	.nav {
+		display: flex;
+	}
+	.tools__box {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+	.slider__wrapp .slider__item {
+		grid-template-columns: 1fr 1fr;
+		.user__info {
+			position: relative;
+			padding: 0;
+		}
+		.info {
+			padding: 0;
+		}
+	}
+	.slick-prev {
+		left: -5%;
+	}
+	.slick-next {
+		right: -5%;
+	}
+	.auth {
+		.btn {
+			padding: 12px 35px !important;
+		}
 	}
 }
 
@@ -159,9 +296,6 @@ body {
 			text-decoration: none;
 			color: rgba(255, 255, 255, 0.55);
 			margin: 0 15px;
-			i {
-				color: rgba(255, 255, 255, 0.55);
-			}
 		}
 	}
 
@@ -184,8 +318,6 @@ body {
 	justify-content: flex-end;
 	height: 700px;
 
-	background: url("../img/bg/header-bg.png") right bottom no-repeat;
-
 	&__content {
 		max-width: 600px;
 
@@ -204,12 +336,10 @@ body {
 
 .tools__box {
 	display: grid;
-	grid-template: 1fr 1fr / 1fr 1fr 1fr;
 	gap: 25px;
 	.item {
 		display: flex;
 		flex-direction: column;
-		padding: 33px;
 		cursor: pointer;
 		position: relative;
 		overflow: hidden;
@@ -243,7 +373,6 @@ body {
 
 		.item__header {
 			display: flex;
-			flex-direction: row;
 			.item__logo {
 				img {
 					margin-right: 30px;
@@ -383,7 +512,6 @@ body {
 	&__wrapp {
 		.slider__item {
 			display: grid;
-			grid-template: 1fr / 1fr 1fr;
 			position: relative;
 			.user {
 				display: flex;
@@ -398,7 +526,6 @@ body {
 				display: flex;
 				justify-content: center;
 				align-items: center;
-				padding-left: 60px;
 			}
 
 			.user__info {
@@ -407,11 +534,6 @@ body {
 				/* Note: backdrop-filter has minimal browser support */
 
 				border-radius: 8px;
-				padding: 10px 23px;
-
-				position: absolute;
-				bottom: 10%;
-				left: 30%;
 
 				.user__name {
 					font-weight: 500;
@@ -437,18 +559,18 @@ body {
 
 .slick-prev {
 	position: absolute;
-	left: -5%;
 	top: 50%;
 	background: none;
 	border: none;
+	z-index: 500;
 }
 
 .slick-next {
 	position: absolute;
-	right: -5%;
 	top: 50%;
 	background: none;
 	border: none;
+	z-index: 500;
 }
 
 .fz50 {
@@ -479,7 +601,6 @@ body {
 			padding: 10px;
 			cursor: pointer;
 
-			width: 30em;
 			&:focus-visible {
 				outline: none;
 			}
@@ -496,10 +617,8 @@ body {
 	margin-bottom: 100px;
 	.container {
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		gap: 115px;
 	}
-	
+
 	&__box {
 		ul {
 			list-style-type: none;
