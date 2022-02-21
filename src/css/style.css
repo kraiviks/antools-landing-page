@@ -175,6 +175,9 @@ body {
     margin: 0 auto;
     padding: 0;
   }
+  .input__search input {
+    width: 30em;
+  }
 }
 
 @media (min-width: 767.98px) {
@@ -360,7 +363,6 @@ body {
   border-radius: 15px;
   padding: 10px;
   cursor: pointer;
-  width: 30em;
 }
 
 .input__search input:focus-visible {
