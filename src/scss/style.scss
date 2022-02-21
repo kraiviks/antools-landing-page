@@ -62,12 +62,18 @@ body {
 			}
 		}
 	}
+	.section-header__content {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		.title {
+			text-align: left;
+		}
+	}
 	.section-header {
 		background: url("../img/bg/header-bg.png") right bottom / 50% no-repeat;
 	}
-	.input__search {
-		transform: scale(0.8);
-	}
+
 	.subscribe__input input {
 		width: 14rem;
 	}
@@ -107,10 +113,14 @@ body {
 		padding: 0;
 	}
 	.input__search {
-		transform: scale(1);
 		padding: 10px 10px 10px 18px;
 		input {
 			width: 30em;
+		}
+	}
+	.section-header {
+		&__content {
+			max-width: 600px;
 		}
 	}
 }
@@ -328,8 +338,6 @@ body {
 	height: 700px;
 
 	&__content {
-		max-width: 600px;
-
 		.social {
 			margin-top: 110px;
 			display: flex;
