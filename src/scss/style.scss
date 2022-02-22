@@ -145,6 +145,7 @@ body {
 			flex-direction: row;
 			justify-content: center;
 			align-items: center;
+			margin: 0;
 		}
 
 		.nav__menu {
@@ -152,6 +153,7 @@ body {
 		}
 		.auth {
 			margin: 0;
+			display: flex !important;
 			.btn {
 				padding: 8px 10px;
 			}
