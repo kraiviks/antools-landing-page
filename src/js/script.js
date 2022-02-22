@@ -10,4 +10,5 @@ $(document).ready(function () {
 
 $(".nav__menu").click(() => {
 	$(".nav").toggle("slow");
+	$(".auth").toggle("slow");
 });
