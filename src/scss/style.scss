@@ -556,7 +556,7 @@ body {
 				display: flex;
 				flex-direction: column;
 				justify-self: flex-end;
-				background: url("../img/bg/slider__user-bg.png") right bottom
+				background: url("../img/bg/slider__user-bg.png") -15px bottom
 					no-repeat;
 			}
 			.info {
@@ -565,6 +565,7 @@ body {
 				display: flex;
 				justify-content: center;
 				align-items: center;
+				padding: 0 5px;
 			}
 
 			.user__info {

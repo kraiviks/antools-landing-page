@@ -771,7 +771,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   justify-self: flex-end;
-  background: url("../img/bg/slider__user-bg.png") right bottom no-repeat;
+  background: url("../img/bg/slider__user-bg.png") -15px bottom no-repeat;
 }
 
 .slider__wrapp .slider__item .info {
@@ -785,6 +785,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0 5px;
 }
 
 .slider__wrapp .slider__item .user__info {
